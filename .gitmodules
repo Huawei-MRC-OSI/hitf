@@ -1,3 +1,6 @@
 [submodule "internal"]
 	path = internal
 	url = http://code-sh.rnd.huawei.com/mrc-cbg-opensource/hitvm-internal.git
+[submodule "tensorflow"]
+	path = tensorflow
+	url = https://github.com/tensorflow/tensorflow
