@@ -1,0 +1,12 @@
+FROM tensorflow/tensorflow:nightly-devel
+
+RUN apt-get update --fix-missing
+RUN apt-get install -y sudo
+
+RUN mkdir /install
+COPY with_the_same_user.sh /install/with_the_same_user.sh
+
+COPY proxy.sh /install/proxy.sh
+RUN /bin/sh /install/proxy.sh
+
+
