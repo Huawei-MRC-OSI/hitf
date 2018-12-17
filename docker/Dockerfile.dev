@@ -6,6 +6,9 @@ RUN apt-get install -y sudo
 RUN mkdir /install
 COPY with_the_same_user.sh /install/with_the_same_user.sh
 
+COPY set_java_home.sh /install/set_java_home.sh
+RUN /bin/sh /install/set_java_home.sh
+
 COPY proxy.sh /install/proxy.sh
 RUN /bin/sh /install/proxy.sh
 
