@@ -21,7 +21,7 @@ docker build \
 
 docker --config "$DOCKER_CFG" \
     run -it \
-    --volume $CWD/tensorflow:/workspace \
+    --volume $CWD:/workspace \
     --workdir /workspace \
     -e HOST_PERMS="$(id -u):$(id -g)" \
     -e "CI_BUILD_HOME=/workspace" \
